@@ -38,4 +38,7 @@
     <transfer name="Lock" strict="true">
     </transfer>
 
+    <transfer name="QueryCriteria">
+    </transfer>
+
 </transfers>
