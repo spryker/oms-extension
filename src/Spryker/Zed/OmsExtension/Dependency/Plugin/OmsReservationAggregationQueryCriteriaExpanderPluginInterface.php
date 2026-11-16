@@ -30,6 +30,8 @@ interface OmsReservationAggregationQueryCriteriaExpanderPluginInterface
      *   domain-specific joins, group-by columns, `withColumn` aliases and `WhereClause` entries.
      * - Reads context from `ReservationRequestTransfer` to decide whether and
      *   how to mutate.
+     * - `WhereClause.clause`, group-by columns and `withColumn` expressions are written to SQL as is, so they MUST NOT contain caller input.
+     * - Passes every value as a `?` placeholder in `WhereClause.clause` and binds it with `WhereClause.parameters`.
      *
      * @api
      *
